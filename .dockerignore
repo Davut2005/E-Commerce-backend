@@ -1,0 +1,22 @@
+# Ignore the node_modules directory
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+tmp/
+temp/
+
+# Ignore environment variables file
+.env
+
+# Ignore Dockerfile itself (if you don't want to send it)
+Dockerfile
+
+# Ignore any documentation files
+docs/
+
+# Ignore version control system files
+.git/
+.gitignore
