@@ -3,19 +3,11 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { GroceriesModule } from './groceries/groceries.module';
+import { config } from './orm.config';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'postgres',
-      username: 'postgres',
-      port: 5432,
-      database: 'postgres',
-      host: 'localhost',
-      password: '2005-Postgres',
-      entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: true,
-    }),
+    TypeOrmModule.forRoot(config),
     GroceriesModule,
   ],
   controllers: [AppController],
