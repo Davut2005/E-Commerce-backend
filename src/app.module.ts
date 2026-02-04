@@ -5,12 +5,14 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ProductsModule } from './products/products.module';
 import { config } from './orm.config';
 import { GroceriesModule } from './groceries/groceries.module';
+import { CategoriesModule } from './categories/categories.module';
 
 @Module({
   imports: [
     TypeOrmModule.forRoot(config),
     GroceriesModule,
     ProductsModule,
+    CategoriesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
