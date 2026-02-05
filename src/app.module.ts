@@ -6,6 +6,8 @@ import { ProductsModule } from './products/products.module';
 import { config } from './orm.config';
 import { GroceriesModule } from './groceries/groceries.module';
 import { CategoriesModule } from './categories/categories.module';
+import { UsersModule } from './users/users.module';
+import { OrdersModule } from './orders/orders.module';
 
 @Module({
   imports: [
@@ -13,6 +15,8 @@ import { CategoriesModule } from './categories/categories.module';
     GroceriesModule,
     ProductsModule,
     CategoriesModule,
+    UsersModule,
+    OrdersModule,
   ],
   controllers: [AppController],
   providers: [AppService],
